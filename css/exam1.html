@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 650px;
+            margin: 0 auto;
+            border: double 5px gray;
+        }
+        .a1{
+            background: skyblue;
+            text-align: center;
+            letter-spacing: 10px;
+            padding: 15px;
+        }
+        .a2{
+            border-top:10px solid blue;
+            border-bottom: 3px dotted;
+            padding: 10px;
+        }
+        .a3{
+            padding: 10px;
+        }
+        /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+        * {margin: 0;}
+        dl{
+            width: 650px;
+            border: 5px double gray;
+            /* auto를 사용하려면 width속성이 적용되어 있어야 한다. */
+            margin: 0 auto;
+        }
+
+        dt{
+            padding: 15px 0;
+            text-align: center; /*가운데 정렬*/
+            background: #aaf;
+            border-bottom: 10px solid blue;
+            letter-spacing: 10px;
+        }
+
+        dd{
+            padding: 10px 0;
+            text-indent: 15px; /*들여쓰기*/
+        }
+        
+        .line{
+            border-bottom: 3px dotted black;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+    <p class="a1">한국의 속담</p>
+    <p class="a2">까마귀 날자 배 떨어진다.</p>
+    <p class="a3">발없는 말이 천리 간다.</p>
+    </div>
+    <dl>
+        <dt>한국의 속담</dt>
+        <dd class="line">
+            까마귀 날자 배 떨어진다.
+        </dd>
+        <dd>
+            발없는 말이 천리 간다.
+        </dd>
+    </dl>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            height: 100vh;
+            background: gray;
+        }
+
+        .all{
+            border-radius: 8px;
+            width: 300px;
+            justify-content: center;
+            padding: 20px;
+            background: white;
+            align-self: center;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        p > a{
+            border: 1px solid black;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="all">
+        <h1>로그인</h1>
+
+        <div>
+            <p>아이디</p>
+            <input type="text" placeholder="아이디 입력">
+        </div>
+
+        <div>
+            <p>비밀번호</p>
+            <input type="password" placeholder="비밀번호 입력">
+        </div>
+
+        <p><a href="#">로그인</a></p>
+
+        아직 회원이 아니신가요? <a href="#">회원가입</a>
+    </div>
+</body>
+</html>

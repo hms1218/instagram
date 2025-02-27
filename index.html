@@ -4,18 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- relationship: 연결하려는 파일과의 관계 -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <img src="image/instagram.png" width="150px">
-    <input type="search" value="검색">
-    <div>
-    <img src="image/profile.jpg" width="150px">
     <!-- <br>태그는 줄바꿈 기능이 있다. -->
-        <div>
-            <h2>half_bottle</h2>
+    <img src="image/instagram.png" width="150px">
+    <input type="search" placeholder="검색">
+    <div id="profile">
+        <div id="profile_pic">
+            <img src="image/profile.jpg" class="circle_pic">
+        </div>
+        <div id="profile_info">
+            <div id="id">half_bottle</div>
             <button>프로필 편집</button>
         </div>
     </div>
+
     <div>
         <p>
             <!-- <strong> 볼드체 표현-->
@@ -28,32 +33,60 @@
             <a href = "http://needleworm.github.io">needleworm.github.io</a>
         </p>
     </div>
-    <div>하이라이트가 들어갈 자리</div>
-    <div>
-        <div>
+
+    <div id="highlight_area">
+        <div class="highlight">
+            <div class="highlight_pic">
+                <img src="image/hl1.jpg" class="circle_pic">
+            </div>
+            <div>
+                😊
+            </div>
+        </div>
+        <div class="highlight">
+            <div class="highlight_pic">
+                <img src="image/hl2.jpg" class="circle_pic">
+            </div>
+            <div>
+                👍
+            </div>
+        </div>
+    </div>
+
+    <div></div>
+
+    <div id="stat_bar">
+        <div class="stat">
             게시물<br>
             133<br>
         </div>
-        <div>
+        <div class="stat">
             팔로워<br>
             408<br>
         </div>
-        <div>
+        <div class="stat">
             팔로우<br>
             189<br>
         </div>
     </div>
+
     <div>아이콘이 들어갈 자리</div>
-    <div>
-        <img src="image/th1.jpg" width="32%">
-        <img src="image/th2.jpg" width="32%">
-        <img src="image/th3.jpg" width="32%">
-        <img src="image/th4.jpg" width="32%">
-        <img src="image/th5.jpg" width="32%">
-        <img src="image/th6.jpg" width="32%">
-        <img src="image/th7.jpg" width="32%">
-        <img src="image/th8.jpg" width="32%">
-        <img src="image/th9.jpg" width="32%">
+
+    <div class="thumbnail_grid">
+        <img src="image/th1.jpg" class="thumbnail">
+        <img src="image/th2.jpg" class="thumbnail">
+        <img src="image/th3.jpg" class="thumbnail">
+    </div>
+    <div class="thumbnail_grid">
+        <img src="image/th4.jpg" class="thumbnail">
+        <img src="image/th5.jpg" class="thumbnail">
+        <img src="image/th6.jpg" class="thumbnail">
+    </div>
+    <div class="thumbnail_grid">
+        <img src="image/th7.jpg" class="thumbnail">
+        <img src="image/th8.jpg" class="thumbnail">
+        <img src="image/th9.jpg" class="thumbnail">
+    </div>
     </div>
 </body>
 </html>

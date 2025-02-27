@@ -11,10 +11,11 @@
             background: gray;
         }
 
-        .all{
-            border-radius: 8px;
+        .container{
+            border-radius: 8px; /* 테두리 둥글게 */
             width: 400px;
             justify-content: center;
+            /* align-items: center; */
             padding: 20px;
             background: white;
             align-self: center;
@@ -26,34 +27,19 @@
         }
 
         div p{
-            text-align: left;
+            text-align: center;
             /* border: 1px solid green; */
         }
 
-        div p input{
-            /* width:  100%; */
-            /* box-sizing: border-box; */
-        }
-
-        .text{
+        .id{
+            margin-left: -130px;
             font-weight: bold;
         }
-
-        /* .login{
-            text-align: center;
-            background: blue;
-            padding: 15px;
+        
+        .password{
+            margin-left: -115px;
+            font-weight: bold;
         }
-
-        .login input{
-            background: blue;
-            color: white;
-            border: none;
-        }
-
-        .login:hover{
-            background: purple;
-        } */
 
         button{
             /* border: 1px solid blue; */
@@ -67,21 +53,27 @@
             background: purple;
         }
 
+        /* label{
+            margin: auto;
+        } */
 
-        .foot{
-            text-align: center;
-        }
+
+        /* div p input{
+            width:  100%;
+            box-sizing: border-box;
+            
+        }  */
     </style>
 </head>
 <body>
-    <div class="all">
+    <div class="container">
         <h1>로그인</h1>
         
         <div>        
-            <p class="text">아이디</p>
+            <p class="id">아이디</p>
             <p><input type="text" placeholder="아이디 입력"></p>
             
-            <p class="text">비밀번호</p>
+            <p class="password">비밀번호</p>
             <p><input type="password" placeholder="비밀번호 입력"></p>         
 
             <!-- <p class="login">
@@ -91,7 +83,7 @@
             <button>로그인</button>
         </div>
 
-        <p class="foot">
+        <p class="text">
             아직 회원이 아니신가요? <a href="#">회원가입</a>
         </p>
     </div>

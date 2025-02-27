@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f2f2f2;
+        }
+
+        /* 회원가입 컨테이너 */
+        .signup-container{
+            background: white;
+            width: 300px;
+            border-radius: 4px;
+            padding: 20px;
+        }
+
+        /* 타이틀 제목 */
+        .signup-container h2{
+            text-align: center;
+        }
+
+        /* 개인정보 입력칸 */
+        .signup-container form{
+            /* border: 1px solid red; */
+            display: flex;
+            flex-direction: column;
+            margin: 5px;
+        }
+
+        .signup-container input:focus{
+            outline: none;
+            border-color: blue;
+        }
+
+        /* 개인정보 제목 */
+        .signup-container label{
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 15px;
+        }
+
+        /* 텍스트 입력칸 */
+        .signup-container input{
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid gray;
+        }
+        
+        /* 아이디입력칸 + 중복체크 */
+        .signup-container .doublecheck{
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        
+        .signup-container .doublecheck input{
+            flex: 1;
+        }
+
+        /* 중복체크 버튼 */
+        .signup-container .doublecheck button{
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        /* 이메일 */
+        .signup-container .email{
+            display: flex;
+            justify-content: space-between;
+            /* align-items: baseline; */
+        }
+
+        /* 이메일 드롭다운 */
+        .signup-container .email select{
+            margin-bottom: 9px;
+            border-radius: 4px;
+            /* padding: 10px; */
+            font-size: 14px;
+        }
+
+        /* @ 텍스트 위치 옮기기 */
+        .email span{
+            font-size: 14px;
+            position: relative;
+            top: 7px;
+        }
+
+
+        /* 중복체크 버튼 */
+        .signup-container button{
+            background: blue;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+        }
+
+        /* 회원가입 버튼 */
+        .signup-container .signup{
+            margin-top: 20px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .signup-container button:hover{
+            background: #2e1cb3;
+        }
+
+        /* signup 텍스트 */
+        .signup-container .signup-link{
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        /* signup 링크 */
+        .signup-container .signup-link a{
+            text-decoration: none;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h2>회원가입</h2>
+        <form action="#" method="post">
+            <label for="name">이름</label>
+            <input type="text" id="name" placeholder="이름 입력">
+  
+            <label for="username">아이디</label>
+            <div class="doublecheck">    
+                <input type="text" id="username" placeholder="아이디 입력">
+                <button>중복체크</button>
+            </div>
+
+            <label for="password">비밀번호</label>
+            <input type="password" id="password" placeholder="비밀번호 입력">
+
+            <label for="password-test">비밀번호 확인</label>
+            <input type="password" id="password-test" placeholder="비밀번호 확인">
+
+            <label for="email">이메일</label>
+            <div class="email">
+                <input type="text" id="email" placeholder="이메일 아이디">
+                <span>@</span>
+                <select>
+                    <option selected>naver.com</option>
+                    <option>daum.net</option>
+                    <option>gmail.com</option>
+                    <option>직접 입력</option>
+                </select>
+            </div>
+
+            <button class="signup">회원가입</button>
+            <div class="signup-link">
+                이미 계정이 있으신가요?<a href="login.html">로그인</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

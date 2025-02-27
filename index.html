@@ -6,17 +6,27 @@
     <title>Document</title>
     <!-- relationship: 연결하려는 파일과의 관계 -->
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet"/>
 </head>
 <body>
     <!-- <br>태그는 줄바꿈 기능이 있다. -->
-    <img src="image/instagram.png" width="150px">
-    <input type="search" placeholder="검색">
+     <div id="top">
+        <img src="image/instagram.png">
+        <input type="search" placeholder="검색">
+        <div>
+            <i class="fa-solid fa-house"></i>
+            <i class="fa-solid fa-paper-plane"></i>
+            <i class="fa-solid fa-compass"></i>
+            <i class="fa-solid fa-heart"></i>
+        </div>
+    </div>
+
     <div id="profile">
         <div id="profile_pic">
             <img src="image/profile.jpg" class="circle_pic">
         </div>
         <div id="profile_info">
-            <div id="id">half_bottle</div>
+            <div id="id">half_bottle<i class="fa-solid fa-gear"></i></div>
             <button>프로필 편집</button>
         </div>
     </div>
@@ -51,9 +61,8 @@
                 👍
             </div>
         </div>
+        <div></div>
     </div>
-
-    <div></div>
 
     <div id="stat_bar">
         <div class="stat">
@@ -70,7 +79,28 @@
         </div>
     </div>
 
-    <div>아이콘이 들어갈 자리</div>
+    <!-- 아이콘이 들어갈 자리 -->
+    <div id="sub_icons">
+        <div class="selected">
+            <i class="fa-solid fa-film"></i>
+        </div>
+        
+        <div>
+            <i class="fa-solid fa-circle-play"></i>
+        </div>
+        
+        <div>
+            <i class="fa-solid fa-bookmark"></i>
+        </div>
+        
+        <div>
+            <i class="fa-solid fa-border-all"></i>
+        </div>
+        
+        <div>
+            <i class="fa-solid fa-user-tag"></i>
+        </div>
+    </div>
 
     <div class="thumbnail_grid">
         <img src="image/th1.jpg" class="thumbnail">

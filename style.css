@@ -81,7 +81,7 @@ h2{
     display: grid;
     grid-template-rows: 1fr 1fr;
 
-    height: 50px;
+    height: 70px;
 }
 
 #id{
@@ -96,4 +96,56 @@ button{
     background-color: white;
     border: 1px solid gray;
     border-radius: 3px;
+}
+
+#top{
+    display: grid;
+    grid-template-columns: 4fr 7fr 4fr;
+    height: auto;
+    margin-bottom: 35px;
+    border-bottom: 0.1px solid gray;
+
+    /* border: solid red; */
+}
+
+#top img{
+    margin-left: auto;
+    margin-right: auto;
+
+    height: 100%;
+    object-fit: contain;
+    /* border: solid red; */
+}
+
+#top input{
+    height: 35%;
+    width: 95%;
+    margin: auto;
+    text-align: center;
+    background: rgb(250,250,250);
+    border: 1px solid gray;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 100;
+}
+
+#top div{
+    text-align: center;
+}
+
+i{
+    font-size: 40px;
+    margin-top: 10px;
+}
+
+#sub_icons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    text-align: center;
+    font-size: 15px;
+    height: 60px;
+}
+
+.selected{
+    border-bottom: 3px solid gray;
 }

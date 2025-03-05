@@ -10,7 +10,7 @@
       //해당 month에 몇일 있는지 출력
       //예시 출력결과 : 3월은 31일까지 있습니다.
 
-      let month = 6;
+      let month = 3;
 
       switch(month){
         case 1: case 3: case 5: case 7: case 8: case 10: case 12:
@@ -21,6 +21,9 @@
           break;
         case 2:
           console.log(`${month}월은 28일까지 있습니다.`);
+          break;
+        default:
+          console.log("잘못된 월 입력입니다.");
           break;
       }
   </script>

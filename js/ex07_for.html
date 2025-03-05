@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        for(let i = 0; i < 10; i++){
+            console.log(i);
+        }
+        //시작값과 종료값 사이에서 참이되는 숫자의 갯수가 반복횟수이다.
+
+        for(let i = 1; i <= 6; i++){
+            document.write(`<h${i}>자바스크립트</h${i}>`);
+        }
+
+        document.write('<hr>');
+
+        document.write('<ul>');
+        for(let i = 1; i <= 3; i++){
+            document.write(`<li>안녕</li>`);
+        }
+        document.write('</ul>');
+
+        document.write('<hr>');
+
+        for(let i = 1; i <= 9; i++){
+            document.write(`8x${i}=${8*i}<br>`);
+        }
+
+        document.write('<hr>');
+
+        //10부터 1까지 출력하기
+
+        for(let i = 10; i >= 1; i--){
+            document.write(`${i}<br>`);
+        }
+
+        document.write('<hr>');
+
+
+        //1부터 10까지의 총합
+        
+        let sum = 0;
+        for(let i = 1; i <= 10; i++){
+            sum += i;
+        }
+        document.write(sum);
+
+        document.write('<hr>');
+
+        //1부터 10까지 중 짝수만 출력하기
+
+        for(let i = 1; i <= 10; i++){
+            if(i % 2 == 0){
+                document.write(i,'<br>');
+            }
+        }
+
+        document.write('<hr>');
+
+        //1부터 10까지 3의 배수만 출력
+
+        for(let i = 1; i <= 10; i++){
+            if(i % 3 == 0){
+                document.write(i, "<br>");
+            }
+        }
+
+        document.write('<hr>');
+
+        //for문의 중첩
+        //반복문의 반복
+        for(let i = 1; i < 4; i++){
+            for(let j = 1; j < 4; j++){
+                document.write(i," ",j,"<br>")
+            }
+        }
+
+        document.write('<hr>');
+
+        for(let i = 1; i < 4; i++){
+            for(let j = 1; j < 5; j++){
+                document.write(1);
+            }
+            document.write("<br>");
+        }
+
+        document.write('<hr>');
+
+        // A A A
+        // A A A
+        // A A A
+        // A A A
+
+        for(let i = 1; i < 5; i++){
+            for(let j = 1; j < 4; j++){
+                document.write("A ");
+            }
+            document.write("<br>");
+        }
+
+        document.write('<hr>');
+
+        //1 2 3 4
+        //1 2 3 4
+        //1 2 3 4
+
+        for(let i = 1; i < 4; i++){
+            for(let j = 1; j < 5; j++){
+                document.write(j," ");
+            }
+            document.write("<br>");
+        }
+
+        document.write('<hr>');
+
+        //1 2 3 4
+        //5 6 7 8
+        //9 10 11 12
+
+        let x = 0;
+        for(let i = 1; i < 4; i++){
+            for(let j = 1; j < 5; j++){
+                document.write(++x, " ");
+            }
+            document.write("<br>")
+        }
+
+        document.write('<hr>');
+
+        //* * *
+        //* * *
+        //* * *
+        //* * *
+
+        for(let i = 0; i < 4; i++){
+            for(let j = 0; j < 3; j++){
+                document.write("* ");
+            }
+            document.write("<br>");
+        }
+
+        document.write('<hr>');
+
+        //*
+        //* *
+        //* * *
+        //* * * *
+        //* * * * *
+
+        for(let i = 0; i < 5; i++){
+            for(let j = 0; j <= i; j++){
+                document.write("* ");
+            }
+            document.write("<br>");
+        }
+
+        document.write('<hr>');
+
+        //        *
+        //      * *
+        //    * * *
+        //  * * * *
+        //* * * * *
+
+        for(let i = 0; i <= 4; i++){
+            for(let j = 0; j < 5-(i+1); j++){
+                document.write(" &nbsp");
+            }
+            for(let k = 1; k <= i+1; k++){
+                document.write(" *");
+            }
+            document.write("<br>");
+        }
+
+        for(let i = 1; i <= 10; i++){
+            for(let j = 0; j < 10; j++){
+                let num = i+j;
+                if(num > 10){
+                    num -= 10;
+                }
+                document.write(num," ");
+            }
+            document.write("<br>");
+        }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -133,13 +133,28 @@
         
         // reversed("asdf");
 
-        let str = "asdfg";
-        let reversed = "";
+        function reverse(ss){
+            let str = ss;
+            let reversed = "";
 
-        for(let i=str.length; i>=0; i--){
-            reversed += str[i];
+            for(let i=str.length-1; i>=0; i--){
+                reversed += str[i];
+            }
+            return reversed;
         }
-        document.write(reversed);
+        document.write(reverse("asdfg"));
+
+        document.write("<hr>");
+
+        function reverse1(str){
+            let reversed1 = "";
+            for(let i = str.length-1; i >= 0; i--){
+                reversed1 = str[i];
+            }    
+            return reversed1;
+        }
+        document.write(reverse1("abcdf"))
+        
     </script>
 </head>
 <body>

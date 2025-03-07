@@ -102,7 +102,7 @@
             }
             document.write(`${N}~${M}까지의 합 : ${sum}<br>`);
             }
-        total2(9,1);
+        total2(1,10);
 
         document.write("<hr>");
 
@@ -133,23 +133,23 @@
         
         // reversed("asdf");
 
-        function reverse(ss){
-            let str = ss;
-            let reversed = "";
+        // function reverse(ss){
+        //     let str = ss;
+        //     let reversed = "";
 
-            for(let i=str.length-1; i>=0; i--){
-                reversed += str[i];
-            }
-            return reversed;
-        }
-        document.write(reverse("asdfg"));
+        //     for(let i=str.length-1; i>=0; i--){
+        //         reversed += str[i];
+        //     }
+        //     return reversed;
+        // }
+        // document.write(reverse("asdfg"));
 
-        document.write("<hr>");
+        // document.write("<hr>");
 
         function reverse1(str){
             let reversed1 = "";
             for(let i = str.length-1; i >= 0; i--){
-                reversed1 = str[i];
+                reversed1 += str[i];
             }    
             return reversed1;
         }

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let func1 = () => {
+            let input = document.querySelector('#dan');
+            let result = 0;
+            
+            let gugudan = document.querySelector("#gugudan");
+
+            for(let i=1; i<10; i++){
+                gugudan.textContent += (`${input.value} x ${i} = ${input.value * i}<br>`);
+            }
+
+            // gugudan.textContent = result;
+        }
+        let func2 = () => {
+            
+        }
+    </script>
+</head>
+<body>
+    <!-- input에 단을 입력하고 계산시작 누르면 아래에 구구단 나오게 하기 -->
+    <!-- 만약 input에 값이 입력이 안되었다면 "값을 입력해주세요" -->
+    <!-- 만약 input에 1이하 또는 10이상이 입력되었다면 "2~9사이의 값을 입력해주세요" -->
+    <!-- step2 -->
+    <!-- 숨기기 버튼 누르면 아래 출력된 구구단 숨기면서 버튼에 쓰여진 value를 "보이기"로 바꾸기 (보여야됨)-->
+    <!-- 문자열과 태그 같이 사용 -> innerHTML -->
+    단: <input type="text" id="dan"> 
+    <input type="button" value="계산시작" onclick="func1()"> 
+    <input type="button" value="숨기기">
+    <hr>
+    <div id="gugudan">
+
+    </div>
+</body>
+</html>

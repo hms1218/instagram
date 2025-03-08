@@ -6,20 +6,37 @@
     <title>Document</title>
     <script>
         let func1 = () => {
-            let input = document.querySelector('#dan');
-            let result = 0;
-            
-            let gugudan = document.querySelector("#gugudan");
-
-            for(let i=1; i<10; i++){
-                gugudan.textContent += (`${input.value} x ${i} = ${input.value * i}<br>`);
+            let dan = document.querySelector('#dan');
+            let gugudan_div = document.querySelector("#gugudan_div");
+            if(dan.value == ""){
+                alert("값을 입력해주세요.");
+                return;
             }
-
-            // gugudan.textContent = result;
-        }
-        let func2 = () => {
+            if(dan.value <= 1 || dan.value >= 10){
+                alert("2~9사이의 값을 입력해주세요.");
+                return;
+            }
             
+            for(i=1; i<10; i++){
+                gugudan_div.innerHTML += (`${dan.value} x ${i} = ${dan.value*i}<br>`);            
+            }
+            gugudan_div.style.backgroundColor = "black";
+            gugudan_div.style.color = "white";
         }
+
+        let hide = () => {
+            let hide = document.querySelector("#hide");
+            if(hide.value == "숨기기"){
+                hide.value = "보이기";
+                //gugudan_div.innerHTML = "";
+                document.getElementById("gugudan_div").style.display = "none";
+            }
+            else if(hide.value == "보이기"){
+                hide.value = "숨기기";
+                document.getElementById("gugudan_div").style.display = "block";
+            } 
+        }
+
     </script>
 </head>
 <body>
@@ -31,10 +48,11 @@
     <!-- 문자열과 태그 같이 사용 -> innerHTML -->
     단: <input type="text" id="dan"> 
     <input type="button" value="계산시작" onclick="func1()"> 
-    <input type="button" value="숨기기">
+    <input type="button" value="숨기기" id="hide" onclick="hide()">
     <hr>
-    <div id="gugudan">
+    <div id="gugudan_div">
 
     </div>
+
 </body>
 </html>

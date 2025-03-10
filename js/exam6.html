@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let num = 1;
+        
+        let left_page = () => {
+            let img = document.querySelector("#img");
+            num--;
+            if(num < 1){
+                num = 7;
+            }
+            img.src = `../css/image/img${num}.jpg`;
+            
+        }
+
+        let right_page = () => {
+            let img = document.querySelector("#img");
+            num++;
+            if(num > 7){
+                num = 1;
+            }
+            img.src = `../css/image/img${num}.jpg`;
+            
+
+        }
+    </script>
+</head>
+<body>
+    <!-- 
+    왼쪽버튼 : left_btn.png
+    오른쪽버튼 : right_btn.png
+    이미지 : img1 ~ 6.jpg
+    
+    왼쪽버튼 클릭시 숫자가 감소 (1보다 감소될 시 6으로 돌아오기)
+    오른쪽버튼 클릭시 숫자가 증가 (6보다 커질 때 1로 돌아오기)-->
+    <a href="#">
+        <img src = "..\css\image/left_btn.png" onclick = "left_page()">
+    </a>
+
+    <img src = "..\css\image\img6.jpg" id = "img">
+
+    <a href="#">
+        <img src = "..\css\image/right_btn.png" onclick = "right_page()">
+    </a>
+</body>
+</html>

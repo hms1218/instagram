@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .result {
+            text-align: center;
+        }
+    </style>
     <script>
         let func1 = () => {
             let dan = document.querySelector('#dan');
@@ -19,10 +24,9 @@
             }
             
             for(i=1; i<10; i++){
-                box += (`${dan.value} x ${i} = ${dan.value*i}<br>`);    
-                gugudan_div.innerHTML = box;
-                      
+                box += (`${dan.value} x ${i} = ${dan.value*i}<br>`);                          
             }
+            gugudan_div.innerHTML = box;
             gugudan_div.style.backgroundColor = "black";
             gugudan_div.style.color = "white";
         }
@@ -32,12 +36,30 @@
             if(hide.value == "숨기기"){
                 hide.value = "보이기";
                 //gugudan_div.innerHTML = "";
-                document.getElementById("gugudan_div").style.display = "none";
+                document.querySelector("#gugudan_div").style.display = "none";
             }
             else if(hide.value == "보이기"){
                 hide.value = "숨기기";
-                document.getElementById("gugudan_div").style.display = "block";
+                document.querySelector("#gugudan_div").style.display = "block";
             } 
+        }
+
+        let result = (op) => {
+            // document.querySelector("#su1").value; -> 자료형은 무조건 문자열
+            let su1 = parseInt(document.querySelector("#su1").value);
+            let su2 = parseInt(document.querySelector("#su2").value);
+            let total = document.querySelector("#total");
+
+            switch(op){
+                case "+" : total.value = su1 + su2;
+                break;
+                case "-" : total.value = su1 - su2;
+                break;
+                case "*" : total.value = su1 * su2;
+                break;
+                case "/" : total.value = su1 / su2;
+                break;              
+            }
         }
 
     </script>
@@ -56,6 +78,33 @@
     <div id="gugudan_div">
 
     </div>
+    <hr>
+    <!-- 계산기 만들기 -->
+     <table border = "1">
+     <tr>
+        <th>수1</th>
+        <td><input type = "text" id = "su1" placeholder="정수만 입력하세요."></td>
+     </tr>
+     <br>
+     <tr>
+        <th>수2</th>
+        <td><input type = "text" id = "su2" placeholder="정수만 입력하세요."></td>
+     </tr>
+     <br>
+     <tr>
+        <td class = result colspan = "2">
+            <input type="button" value = "+" id = "result" onclick="result('+')">
+            <input type="button" value = "-" id = "result" onclick="result('-')">
+            <input type="button" value = "*" id = "result" onclick="result('*')">
+            <input type="button" value = "/" id = "result" onclick="result('/')">
+        </td>
+     </tr>
+     <br>
+     <tr>
+        <th>결과</th>
+        <td><input id = "total" readonly></td>
+     </tr>
+    </table>
 
 </body>
 </html>

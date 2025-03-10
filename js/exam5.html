@@ -8,6 +8,7 @@
         let func1 = () => {
             let dan = document.querySelector('#dan');
             let gugudan_div = document.querySelector("#gugudan_div");
+            let box = '';
             if(dan.value == ""){
                 alert("값을 입력해주세요.");
                 return;
@@ -18,7 +19,9 @@
             }
             
             for(i=1; i<10; i++){
-                gugudan_div.innerHTML += (`${dan.value} x ${i} = ${dan.value*i}<br>`);            
+                box += (`${dan.value} x ${i} = ${dan.value*i}<br>`);    
+                gugudan_div.innerHTML = box;
+                      
             }
             gugudan_div.style.backgroundColor = "black";
             gugudan_div.style.color = "white";

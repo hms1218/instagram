@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check(f){
+            //유효성 검사
+
+            //ID값 가져오기
+            let myId = f.m_id.value;
+
+            f.submit();
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <table border="1">
+            <tr>
+                <th>ID : </th>
+                <td><input name="m_id" placeholder="아이디를 입력해주세요"></td>
+            </tr>
+            <tr>
+                <th>AGE : </th>
+                <td><input name="m_age" placeholder="나이를 입력해주세요"></td>
+            </tr>
+            <tr>
+                <th>PWD : </th>
+                <td><input type="password" name="m_pwd" placeholder="비밀번호를 입력해주세요"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <!-- 이 버튼을 포함하고 있는 form태그의 정보를 매개변수로 전달 -->
+                    <input type="button" value="전송" onclick="check(this.form)">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <!-- this : 자기 자신에 대한 참조
+     메서드 안에서의 this -> 메서드를 소유한 객체를 참조
+     객체 안에서는 일반적인 모양의 함수는 ok
+     단, 화살표함수 내부에서 사용하는 this는 함수를 포함하고 있는 객체를 참조하지 못한다. -->
+</body>
+</html>
